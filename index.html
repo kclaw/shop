@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script data-main="src/script/main.js" src="src/script/require.js"></script>
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        #menu {
+            width: 80vw;
+        }
+        #banner {
+            height:100vh;
+            background-color: #B7EBD7;
+        }
+        #main {
+            height: 120vh;
+            background-color: #D6FFE5;
+        }
+        #order-method {
+            height: 100vh;
+            background-color: #D6FFC9;
+        }
+        #footer {
+            height: 20vh;
+            background-color: green;
+        }
+        #menu nav {
+            position: fixed;
+            width: 100%;
+            background-color: ghostwhite;
+        }
+        #menu nav ul {
+            list-style: none;
+            width: 100%;
+        }
+        #menu nav ul::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        #menu nav li {
+            float: left;
+            display: inline;
+            margin: 20px 20px;
+        }
+        #menu nav a:link, #banner nav a:visited {
+            color: brown;
+            display: inline-block;
+            font-size: 1em;
+            text-decoration: none;
+        }
+        .nav-up {
+            top: 30px;
+        }
+        .is-visible {
+            opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -webkit-transition: -webkit-transform .2s,background .3s,color .3s;
+        }
+        .is-hidden {
+            opacity: 0;
+  -webkit-transform: translate(0, -60px);
+  -webkit-transition: -webkit-transform .2s,background .3s,color .3s,opacity 0 .3s;
+        }
+        #window-display {
+            overflow: scroll;
+            height:400px;
+            width: 80vw;
+            padding:1vw;
+        }
+        /*window items*/
+        .item {
+            display: block;
+            float: left;
+            width: 33%;
+            background-color: yellow;
+            margin: 1vw;
+        }
+        .item section {
+            display: inline-block;
+            vertical-align: top;
+            width: 20%;
+        }
+        .item figure {
+            display: inline-block;
+            vertical-align: top;
+            width: 80%;
+            overflow: hidden;
+            position: relative;
+        }
+        .item figcaption {
+            position: absolute;
+            bottom: 1em;
+            width: 100%;
+            text-align: center;
+            background-color: crimson;
+        }
+        .item-name::before {
+            content: "";
+            background: url("dist/image/tag79.svg") no-repeat;
+            background-size: 1em 1em;
+            float: left;
+            width: 1em;
+            height: 1em;
+            margin: 0 1em 0 0;
+        }
+        .item-price::before {
+            content: "";
+            background-image: url("dist/image/coins17.svg");
+            background-size: 1em 1em;
+            float: left;
+            width: 1em;
+            height: 1em;
+            margin: 0 1em 0 0;
+
+        }
+        .item-remark::before {
+            content: "";
+            background: url("dist/image/text70.svg") no-repeat;
+            background-size: 1em 1em;
+            float: left;
+            width: 1em;
+            height: 1em;
+            margin: 0 1em 0 0;
+        }
+        .item section div {
+            text-align: center;
+        }
+        #iconWrapper{
+            height: 50px;
+            width: 50px;
+        }
+        #iconWrapper figure img {
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <header id="menu">
+        <nav>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#main">Goods</a></li>
+                <li><a href="#order-method">Order Method</a></li>
+                <li id="shoppingCartIcon"></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="banner">
+        <img src="http://placehold.it/1280x600">
+    </section>
+    <section id="main">
+        <article id="window-display"></article>
+    </section>
+    <section id="order-method">
+
+    </section>
+    <aside id="checkout">
+    </aside>
+    <footer id="footer">
+        <!--facebook plugin-->
+
+    </footer>
+</body>
+</html>

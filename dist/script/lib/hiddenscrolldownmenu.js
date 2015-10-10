@@ -1,0 +1,1 @@
+define("hiddenscrolldownmenu",["jquery","scrollcontroller"],function(n,e){function i(){n("nav").removeClass("is-visible").addClass("is-hidden")}function s(){n("nav").removeClass("is-hidden").addClass("is-visible")}n(document).ready(function(){setInterval(function(){e.isScrollDown()?window.setTimeout(i,300):window.setTimeout(s,300)},200)})});
