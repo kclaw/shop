@@ -6,6 +6,7 @@ define('windowdisplay', ['jquery', 'scrollcontroller','model','item'], function(
         var HTMLWindowDisplayHeader = '<header class="window-display-header">%data%</header>';
         var items = [];
         var categoryName;
+
         function loadItemsFromCategory(){
             console.log('loadItemsFromCategoryc' + categoryId);
             if(categoryId){
