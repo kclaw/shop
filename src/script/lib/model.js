@@ -9,6 +9,8 @@ define('model',[],function(){
          {"id":6,"name":"f","price":"$85","remark":"hello~","image":"http://placehold.it/420x200"}
 
     ];
+    var categories = [{"id":1,"name":"c1","items":[1,2,3,4,5]}];
     model.items = items;
+    model.categories = categories;
     return model;
 });

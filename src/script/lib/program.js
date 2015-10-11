@@ -1,20 +1,20 @@
 define('program',['windowdisplay','item','jquery','scrollcontroller','shoppingcart'],function(windowdisplay,item, $,scrollcontroller,shoppingcart){
     //var scrollcontroller = new scrollcontroller();
-    var wd = new windowdisplay();
+    var wd = new windowdisplay(1);
     var sh = new shoppingcart();
-    wd.addItem(new item(1));
+    /*wd.addItem(new item(1));
     wd.addItem(new item(2));
     wd.addItem(new item(3));
     wd.addItem(new item(4));
     wd.addItem(new item(5));
-    wd.addItem(new item(6));
+    wd.addItem(new item(6));*/
     wd.display();
-    wd.lock();
+    //wd.lock();
     sh.display();
     //setInterval(function(){console.log('hihi');},300);
     //setInterval(function(){check3();},300);
     function main() {
-        scrollcontroller.addScrollPositionCallBack($('#window-display').offset().top, function(){
+        /*scrollcontroller.addScrollPositionCallBack($('#window-display').offset().top, function(){
             console.log('scrollposition is called');
             if(scrollcontroller.isScrollDown()){
                 $('#window-display').scrollTop(0);
@@ -25,7 +25,7 @@ define('program',['windowdisplay','item','jquery','scrollcontroller','shoppingca
         scrollcontroller.addScrollEndCallBack($('#window-display'),function(){
             unlock();
             wd.lock();
-        });
+        });*/
     }
 
     main();

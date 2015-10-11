@@ -82,17 +82,22 @@
   -webkit-transform: translate(0, -60px);
   -webkit-transition: -webkit-transform .2s,background .3s,color .3s,opacity 0 .3s;
         }
-        #window-display {
+
+        .window-display-wrapper {
+            width: 100vw;
             overflow: scroll;
-            height:400px;
-            width: 80vw;
+        }
+        #c1 {
+            width: 100%;
             padding:1vw;
+            display: table;
+        }
+        .window-display-entry {
+            display: table-cell;
+            width: 100%;
         }
         /*window items*/
         .item {
-            display: block;
-            float: left;
-            width: 33%;
             background-color: yellow;
             margin: 1vw;
         }
@@ -172,7 +177,7 @@
         <img src="http://placehold.it/1280x600">
     </section>
     <section id="main">
-        <article id="window-display"></article>
+        <article id="c1"></article>
     </section>
     <section id="order-method">
 
