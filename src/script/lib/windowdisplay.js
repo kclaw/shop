@@ -37,7 +37,7 @@ define('windowdisplay', ['jquery', 'scrollcontroller','model','item'], function(
             $(document).ready(function(){
                 if(categoryId){
                     loadItemsFromCategory();
-
+                    $('#'+categoryName+'-header').text(categoryName);
                     if(items)
                         $('#'+categoryName).append(HTMLWindowDisplayWrapper);
                     items.forEach(function(item){
